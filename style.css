@@ -1,0 +1,33 @@
+/*
+ * Theme Name: Blkcanvas - News Child Theme
+ * Description: Blkcanvas news child theme
+ * Author: Henzly
+ * Template: blkcanvas
+*/
+
+:root, [data-bs-theme=light]{
+	--bs-body-font-family: "Nokora", sans-serif;
+	--bs-link-color:red;
+	--bs-link-hover-color:red;
+	--bs-primary:red;
+
+}
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
+}
+.display-3 {
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
+}
+a {
+	color: var(--bs-link-color);
+}
+.dropdown-menu {
+--bs-nav-link-hover-color:white;
+	--bs-dropdown-link-active-bg:red;
+}
+.pagination {
+	--bs-pagination-active-bg:var(--bs-primary);
+	--bs-pagination-active-border-color:var(--bs-primary);
+}
