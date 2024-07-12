@@ -21,14 +21,6 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          REPO_URL="https://github.com/${{ github.repository }}.git"
-          if [ ! -d "${{ secrets.SSH_PROJECT_DIR }}" ]; then
-            mkdir -p ${{ secrets.SSH_PROJECT_DIR }}
-            git clone $REPO_URL ${{ secrets.SSH_PROJECT_DIR }}
-          elif [ ! -d "${{ secrets.SSH_PROJECT_DIR }}/.git" ]; then
-            git clone $REPO_URL ${{ secrets.SSH_PROJECT_DIR }}
-          else
-            cd ${{ secrets.SSH_PROJECT_DIR }}
-            git fetch origin master
-            git reset --hard origin/master
-          fi
+          cd ${{ secrets.SSH_PROJECT_DIR }}
+          git fetch origin master
+          git reset --hard origin/master
