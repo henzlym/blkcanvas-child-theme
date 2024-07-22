@@ -9,6 +9,21 @@
 	<?php if (is_singular() && get_option('thread_comments')) wp_enqueue_script('comment-reply'); ?>
 	<?php wp_head(); ?>
 	<meta name="description" content="<?php bloginfo('description'); ?>" />
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KVX2HZYJLD"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-KVX2HZYJLD');
+	</script>
+	<!-- END: Google tag (gtag.js) -->
+
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
